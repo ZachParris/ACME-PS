@@ -8,6 +8,16 @@ namespace ACM.BL
 {
     public class Customer
     {
+        public Customer()
+        {
+
+        }
+
+        public Customer(int customerId)
+        {
+            this.CustomerId = customerId;
+        }
+
         public static int InstanceCount { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
@@ -28,6 +38,30 @@ namespace ACM.BL
                 }
                 return fullName;
             }
+        }
+
+        //Retrieve one customer
+        public Customer Retrieve(int customerId)
+        {
+            //retrieves the defined customer
+            return new Customer();
+        }
+
+        //Saves the current customer
+        public bool Save()
+        {
+            //saves the defined customer
+            return true;
+        }
+
+        public bool Validate()
+        {
+            var isValid = true;
+
+            if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
+            if (string.IsNullOrWhiteSpace(EmailAddress)) isValid = false;
+
+            return isValid;
         }
     }
 }
