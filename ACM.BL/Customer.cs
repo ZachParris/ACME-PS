@@ -40,20 +40,6 @@ namespace ACM.BL
             }
         }
 
-        //Retrieve one customer
-        public Customer Retrieve(int customerId)
-        {
-            //retrieves the defined customer
-            return new Customer();
-        }
-
-        //Saves the current customer
-        public bool Save()
-        {
-            //saves the defined customer
-            return true;
-        }
-
         public bool Validate()
         {
             var isValid = true;
