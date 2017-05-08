@@ -22,5 +22,21 @@ namespace Acme.CommonTest
             //Assert
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void InsertSpacesTestWithExistingSpace()
+        {
+            //Arrange
+            var source = "Sonic Screwdriver";
+            var expected = "Sonic Screwdriver";
+
+            var handler = new StringHandler();
+
+            //Act 
+            var actual = handler.InsertSpaces(source);
+
+            //Assert
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
