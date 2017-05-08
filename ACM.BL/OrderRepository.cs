@@ -69,10 +69,23 @@ namespace ACM.BL
         }
 
         //Saves the current order
-        public bool Save()
+        public bool Save(Order order)
         {
-            //saves the defined order
-            return true;
+            var success = true;
+
+            if (order.HasChanges && order.IsValid)
+            {
+                if (order.IsValid)
+                {
+                    //Call an Insert Stored Procedure
+                }
+                else
+                {
+                    //Call an Update Stored Procedure
+                }
+            }
+
+            return success;
         }
 
     }
