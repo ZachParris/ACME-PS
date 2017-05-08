@@ -22,6 +22,7 @@ namespace ACM.BL
 
         public List<Address> AddressList { get; set; }
 
+        public int CustomerType { get; set; }
         public static int InstanceCount { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }
