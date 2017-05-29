@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace Acme.Common
 {
-    class LoggingService
+    public class LoggingService
     {
+        public static void WriteToFile(List<ILoggable> changedItems)
+        {
+            foreach (var item in changedItems)
+            {
+                Console.WriteLine(item.Log());
+            }
+
+        }
     }
 }

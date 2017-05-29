@@ -45,18 +45,25 @@
     </When>
     <Otherwise>
       <ItemGroup>
-        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework" />
+        <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework">
+          <Private>False</Private>
+        </Reference>
       </ItemGroup>
     </Otherwise>
   </Choose>
   <ItemGroup>
     <Compile Include="StringHandlerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="LoggingServiceTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\Acme.Common\Acme.Common.csproj">
       <Project>{d15cc5c9-9378-4377-9e8e-0657b10a929c}</Project>
       <Name>Acme.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ACM.BL.csproj">
+      <Project>{C2551D5A-B070-4F6B-9CED-52589C1303B5}</Project>
+      <Name>ACM.BL</Name>
     </ProjectReference>
   </ItemGroup>
   <Choose>
